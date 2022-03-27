@@ -7,7 +7,7 @@
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	
-	<name>maven-web-application</name>
+	<name>arun-web</name>
 
 	<description>Maven Web Project for Java Project</description>
 
@@ -132,7 +132,7 @@
 					<webApp>
 						<contextPath>/arun-webapp</contextPath>
 					</webApp>
-				</configuration>
+			Z	</configuration>
 			</plugin>
 
 			<plugin>
