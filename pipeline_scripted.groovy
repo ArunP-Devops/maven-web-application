@@ -4,7 +4,8 @@ node {
 def mvn_home = tool name: "maven 3.8.5"
     stage ('checkoutscm'){
     //git branch: 'master',credentialsId: '0305b74e-bc5b-4fb3-a1a4-76b65fd27e62', url: 'https://github.com/MithunTechnologiesDevOps/maven-web-application.git'
-    git credentialsId: '0305b74e-bc5b-4fb3-a1a4-76b65fd27e62', url: 'https://github.com/ArunP-Devops/maven-web-application.git'
+    //git credentialsId: '0305b74e-bc5b-4fb3-a1a4-76b65fd27e62', url: 'https://github.com/ArunP-Devops/maven-web-application.git'
+        checkout scm
     }//end of checkoutscm stage
 
     stage ('build'){
