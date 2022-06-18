@@ -1,9 +1,10 @@
 
-
 apiVersion: v1
 kind: ReplicationController
 metadata:
   namespace: arun
+  name: arun-rc
+spec:
   replicas: 3
   template:
     metadata:
@@ -13,22 +14,22 @@ metadata:
     spec:
       containers:
       - name: web-app-container
-      image: arun2506/arun-maven-app:2
-      ports:
-      - containerPort: 8080
+        image: arun2506/arun-maven-app:2
+        ports:
+        - containerPort: 8080
       - name: nginx
-      image: nginx
-      ports:
-      - containerPort: 80
+        image: nginx
+        ports:
+        - containerPort: 80
 ---
-apiVersion: V1
+apiVersion: v1
 kind: Service
 metadata:
   name: web-app-svc
   namespace: arun
 spec:
   type: NodePort
-  selector: 
+  selector:
     app: web
   ports:
   - port : 9999
