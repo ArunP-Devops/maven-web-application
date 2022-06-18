@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: web-app-container
-        image: arun2506/arun-maven-app:%IMAGE_TAG%
+        image: arun2506/arun-maven-app:IMAGE_TAG
         ports:
         - containerPort: 8080
       - name: nginx
